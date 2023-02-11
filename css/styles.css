@@ -186,6 +186,8 @@ body {
   border-radius: 4px;
   border: 1px;
 
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
   cursor: pointer;
   background-color: var(--logo-color-braun);
   font-family: inherit;
@@ -313,6 +315,7 @@ body {
 }
 .items {
   background-color: var(--bg-white-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-images {
   display: block;
@@ -354,10 +357,14 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: #4d5ae5;
+  background-color: var(--logo-color-braun);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.team-soc-link:is(:hover, :focus) {
+  background-color: var(--adress-link-color);
 }
 
 /* -----------------------CUSTOMERS LIST------------------- */
@@ -374,7 +381,6 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--main-color-title);
-
 }
 .customers-list {
   display: flex;
@@ -412,6 +418,9 @@ body {
 
   background-color: var(--main-color-title);
 }
+.footer-container {
+  display: flex;
+}
 
 .footer-link {
   text-transform: uppercase;
@@ -440,6 +449,44 @@ body {
   margin-top: 16px;
 }
 
+/* ----------------------FOOTER SOCIAL MEDIA----------------------------- */
+.media-footer {
+  margin-left: 120px;
+}
+.media-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--bg-white-color);
+  
+  padding-bottom: 16px;
+}
+
+.media-list {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.media-item {
+  width: 40px;
+  height: 40px;
+}
+.media-link {
+  fill: var(--ashen-color);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.media-link:is(:hover, :focus) {
+  background-color:#31D0AA;
+}
 /* ---------------------------PORTFOLIO--------------------------- */
 
 .main {
@@ -462,7 +509,6 @@ body {
 
 .button-items {
   padding: 12px 24px;
-
   border-radius: 4px;
   border: 1px solid var(--ashen-color);
 
@@ -474,12 +520,15 @@ body {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+
+
 }
 
 .button-items:is(:hover, :focus) {
   background-color: var(--logo-color-braun);
   color: var(--bg-white-color);
   border-color: transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .types-section {
@@ -493,14 +542,19 @@ body {
   width: calc((100% - 48px) / 3);
 }
 .types-link {
+
 }
-.link {
+.types-link:is(:hover, :focus) {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
 .types-images {
   display: block;
   max-width: 100%;
   height: auto;
 }
+
+
 .types-text-block {
   border-right: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
